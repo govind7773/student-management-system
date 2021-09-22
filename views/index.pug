@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    include ./links
+    <title>user management</title>
+</head>
+
+<body>
+    include ./header
+    <main id="main_body">
+        <div class="user-create">
+            <a href="/new_user"><span>new user <i class="far fa-user"></i></span></a>
+        </div>
+        <form action="/" method="post">
+            <table class="table">
+                <thead class="table-head">
+                    <tr>
+                        <th>id</th>
+                        <th>name</th>
+                        <th>@email</th>
+                        <th>gender</th>
+                        <th>status</th>
+                        <th>action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                include ./table
+                </tbody>
+            </table>
+        </form>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.center{
+    text-align: center;
+}
+.light-color{
+    color: rgb(90, 87, 87);
+}
+.dark-color{
+    color: black;
+}
+.container{
+
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+.container a{
+    text-decoration: none;
+    color: black;
+}
+#header{
+    width: 100vw;
+    font-size: 2rem;
+    background-color: #c8c8c8;
+    border: 2px solid black;
+    font-weight: bold;
+}
+.user-create span {
+    border: 1px solid black;
+    font-size: 1.5rem;
+    padding: 5px;
+    box-shadow: 1px 2px 5px grey;
+  
+}
+.user-create{
+    margin-bottom: 27px;
+}
+.user-create a{
+    text-decoration: none;
+    color: black;
+}
+#main_body{
+    width: 740px;
+    margin: 40px auto;
+}
+.table{
+    border-spacing: 0px;
+    width: 100%;
+}
+.table td,.table th{
+    border-top: 1px solid black;
+    vertical-align: top;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 4px 0px;
+}
+.table-head{
+    background-color: #3a3737;
+    color: white;
+}
+.table td a{
+    color: black;
+    padding: 1px 0px;
+}
+.update{
+    margin: 2px;
+}
+.table tr:hover{
+    background-color: rgb(207 215 221);
+}
+@media screen and (max-width:1054px){
+    .container{
+
+        width: 72%;
+    }
+    #header{ 
+        font-size: 1rem;
+    }
+    .user-create span {
+       
+        font-size: 0.9rem;
+    }
+    #main_body {
+        width: 358px;
+    }
+    .table td,.table th{
+        font-size: 0.8rem;
+        padding: 2px 0px;
+    }
+}
+
+.filter a{
+text-decoration: none;
+color: black;
+font-size: 1.4rem;
+}
+.filter span{
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px gray;
+}
+.heading {
+    border-bottom:1px solid black;
+}
+
+/* form styling */
+#contact-box {
+    width: 60%;
+    margin: 20px auto;
+    font-size: 1.3rem;
+    text-align: center;
+    border: 1px solid black;
+    height: 200px;
+    padding: 20px;
+}
+#contact-box button {
+    width: 16%;
+    margin: auto;
+    display: block;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    box-shadow: 2px 2px 5px;
+}
+
+#contact-box button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+#contact-box input {
+    padding: 0.5rem;
+    border-radius: 9px;
+}
+
