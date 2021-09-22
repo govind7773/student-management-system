@@ -32,7 +32,7 @@ app.use(express.json());
 app.get('/', (req, res) => {
     axios.get('http://localhost:8000/api/users')
         .then(function (response) {
-            console.log(response.data);
+            // console.log(response.data);
             res.render('index', { users: response.data });
         }).catch(err => {
             res.send(err);
@@ -51,12 +51,12 @@ app.get('/new_user', (req, res) => {
 
 })
 app.get('/update', (req, res) => {
-    // axios.get('http://localhost:8000/api/users', { params: { id: req.query.id } })
-    //     .then(function (userdata) {
-    //         res.render('update', { user: userdata.data });
-    //     }).catch(err => {
-    //         res.send(err);
-    //     })
+    axios.get('http://localhost:8000/api/users', { params: { id: req.query.id } })
+        .then(function (userdata) {
+            res.render('update', { user: userdata.data });
+        }).catch(err => {
+            res.send(err);
+        })
 
 
 })

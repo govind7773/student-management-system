@@ -23,14 +23,26 @@ exports.create = async (req, res) => {
 
 }
 // find users
-exports.find = async (req, res) => {
+exports.find = (req, res) => {
+    if (req.query.id) {
 
-    try {
-        const usersdata = await userdb.find();
-        res.status(200).send(usersdata);
+        const _id = req.query.id;
+        userdb.findById(_id)
+            .then(function (userd) {
+                res.status(200).send(userd);
+                console.log(userd);
+            }).catch(err => {
+                res.status(400).send(err);
+            })
+    } else {
 
-    } catch (e) {
-        res.status(400).send(e);
+        userdb.find()
+            .then(function (usersdata) {
+                res.status(200).send(usersdata);
+            }).catch(e => {
+                res.status(400).send(e);
+            })
+
     }
 
 }

@@ -91,6 +91,16 @@
         font-size: 0.8rem;
         padding: 2px 0px;
     }
+    #contact-box button {
+        width: 35%;
+    }
+    #contact-box {
+        width: 80%;
+        font-size: 0.8rem;
+    }
+    #main_body {
+        width: 471px;
+    }
 }
 
 .filter a{

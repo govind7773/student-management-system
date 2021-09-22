@@ -18,27 +18,36 @@
             <p class="light-color">use bellow form to update a user</p>
         </div>
 
+        //-
         <!-- form handling -->
         <div id="contact-box">
             <form method="POST" id="update_user">
                 <div class="form-group">
                     <label for="name" class="light-color">name: </label>
-                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                    <input type="text" name="name" value="#{user.name}" id="name" placeholder="Enter your name">
                 </div>
                 <div class="form-group">
 
                     <label for="email" class="light-color">Email: </label>
-                    <input type="email" name="email" id="email" placeholder="Enter your email">
+                    <input type="email" name="email" id="email" value="#{user.email}" placeholder="Enter your email">
                 </div>
                 <div class="form-group">
                     <label for="gender" class="light-color">Gender: </label>
-                    <input type="radio" name="gender" value="male">Male
-                    <input type="radio" name="gender" value="female">Female
+                    if user.gender == "male"
+                        <input type="radio" name="gender" value="male" checked>Male
+                        <input type="radio" name="gender" value="female">FeMale
+                    if user.gender == "female"    
+                        <input type="radio" name="gender" value="male">Male
+                        <input type="radio" name="gender" value="female" checked>FeMale
                 </div>
                 <div class="form-group">
                     <label for="status" class="light-color">status: </label>
-                    <input type="radio" name="status" value="active">active
-                    <input type="radio" name="status" value="inactive">inactive
+                    if user.status == "active"
+                        <input type="radio" name="status" value="active" checked>active
+                        <input type="radio" name="status" value="inactive">inactive
+                    if user.status == "inactive"
+                        <input type="radio" name="status" value="active" >active
+                        <input type="radio" name="status" value="inactive" checked>inactive
                 </div>
                 <div class="form-group">
                     <button type="button" id="submit_btn">Update</button>
