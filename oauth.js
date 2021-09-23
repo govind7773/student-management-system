@@ -22,13 +22,13 @@ const drive = google.drive({
     auth: oauth2client
 })
 
-const filepath = path.join(__dirname, '/img/user.png');
+const filepath = path.join(__dirname, '/img/twitter.png');
 
 async function uploadfile() {
     try {
         const response = await drive.files.create({
             requestBody: {
-                name: 'userlogo.png',
+                name: 'twitterlogo.png',
                 mimetype: 'image/png'
             },
             media: {
