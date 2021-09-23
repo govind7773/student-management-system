@@ -3,37 +3,44 @@
     margin: 0px;
     box-sizing: border-box;
 }
+
+body{
+    background: rgba(0,0,0,0.7) url("../img/pexels-sanaan-mazhar-3075993.jpg");
+    background-size:cover;
+    background-blend-mode: darken;
+    display: flex;
+    flex-direction:column;
+    height: 100vh;
+}
 .center{
     text-align: center;
 }
 .light-color{
-    color: rgb(90, 87, 87);
+    color: rgb(192 183 183);
 }
 .dark-color{
-    color: black;
+    color:white;
 }
 .container{
-
-    width: 500px;
     margin: auto;
     text-align: center;
 }
 .container a{
     text-decoration: none;
-    color: black;
+    color: #ff321c;
 }
 #header{
     width: 100vw;
     font-size: 2rem;
-    background-color: #c8c8c8;
-    border: 2px solid black;
+    /* background-color: #c8c8c8; */
+    border: 2px solid rgb(224, 224, 224);
     font-weight: bold;
 }
 .user-create span {
-    border: 1px solid black;
+    border: 1px solid snow;
     font-size: 1.5rem;
     padding: 5px;
-    box-shadow: 1px 2px 5px grey;
+    box-shadow: 1px 2px 5px #e9e0e0;
   
 }
 .user-create{
@@ -41,7 +48,7 @@
 }
 .user-create a{
     text-decoration: none;
-    color: black;
+    color: #ff5908;
 }
 #main_body{
     width: 740px;
@@ -52,25 +59,26 @@
     width: 100%;
 }
 .table td,.table th{
-    border-top: 1px solid black;
+    border-top: 1px solid #fa6c6c;
     vertical-align: top;
     text-align: center;
+    color: white;
     font-size: 1.1rem;
     padding: 4px 0px;
 }
 .table-head{
-    background-color: #3a3737;
+    background-color: #0b0a0a;
     color: white;
 }
 .table td a{
-    color: black;
+    color: #d3cccc;
     padding: 1px 0px;
 }
 .update{
     margin: 2px;
 }
 .table tr:hover{
-    background-color: rgb(207 215 221);
+    background-color: rgb(0 0 0);
 }
 @media screen and (max-width:1054px){
     .container{
@@ -105,12 +113,12 @@
 
 .filter a{
 text-decoration: none;
-color: black;
+color: #e1d9d9;
 font-size: 1.4rem;
 }
 .filter span{
-    border: 1px solid black;
-    box-shadow: 2px 2px 5px gray;
+    border: 1px solid #edecec;
+    box-shadow: 2px 2px 5px #d5c5c5;
 }
 .heading {
     border-bottom:1px solid black;
@@ -119,10 +127,12 @@ font-size: 1.4rem;
 /* form styling */
 #contact-box {
     width: 60%;
+    color: white;
     margin: 20px auto;
     font-size: 1.3rem;
     text-align: center;
-    border: 1px solid black;
+    background-color: rgba(0,0,0,0.4);
+    border: 1px solid #fffcfc;
     height: 200px;
     padding: 20px;
 }
@@ -142,6 +152,17 @@ font-size: 1.4rem;
 }
 #contact-box input {
     padding: 0.5rem;
+    background-color: black;
     border-radius: 9px;
+    color: white;
+}
+#user_data h1{
+    font-size: 1.3rem;
+    /* padding: 2px 0px; */
+    font-style: italic;
+    text-align: center;
 }
 
+.table td a:hover {
+    color: #2c29b0;
+}

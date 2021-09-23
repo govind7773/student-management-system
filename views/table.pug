@@ -1,13 +1,21 @@
 - for (var i = 0; i < users.length; ++i) { 
-    <tr>
+<tr>
     <td>#{i+1}</td>
     <td>#{users[i].name}</td>
     <td>#{users[i].email}</td>
     <td>#{users[i].gender}</td>
     <td>#{users[i].status}</td>
     <td>
-        <a href="/update?id=#{users[i]._id}" class="btn update"><span class="action_btn"><i class="fas fa-pencil-alt"></i></span></a>
-        <a href="/delete" class="btn delete"><span class="action_btn"><i class="fas fa-trash"></i></span></a>
+        <a href="/update?id=#{users[i]._id}" class="btn update">
+            <span class="action_btn">
+                <i class="fas fa-book-reader"></i>
+            </span>
+        </a>
+        <a class="btn delete" btn-data="#{users[i]._id}">
+            <span class="action_btn">
+                <i class="fas fa-trash"></i>
+            </span>
+        </a>
     </td>
-    </tr>
-    - }
+</tr>
+- }

@@ -60,13 +60,13 @@ exports.update = async (req, res) => {
         res.status(500).send(e);
     }
 }
-// deleting data of uses
+// deleting data of users
 exports.delete = async (req, res) => {
     try {
         const _id = req.params.id;
-        const delete_user = await userdb.findByIdAndDelete(req.params.id);
+        const delete_user = await userdb.findByIdAndDelete(_id);
 
-        if (!req.params.id) {
+        if (!_id) {
             return res.status(400).send();
         }
         res.status(200).send(delete_user);

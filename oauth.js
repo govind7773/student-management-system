@@ -1,6 +1,8 @@
 const { google } = require('googleapis');
 const path = require('path');
 const fs = require('fs');
+const express = require('express');
+const app = express();
 
 const CLIENT_ID = '771058827984-2sdi6cj8cka40224ftqaskl0iho9rb15.apps.googleusercontent.com';
 const CLIENT_SECRET = 'w-nGttfmW4hAI11XHuXvB2QN';
@@ -22,13 +24,13 @@ const drive = google.drive({
     auth: oauth2client
 })
 
-const filepath = path.join(__dirname, '/img/twitter.png');
+const filepath = path.join(__dirname, '/img/download.png');
 
-async function uploadfile() {
+app.get('/', async function uploadfile() {
     try {
         const response = await drive.files.create({
             requestBody: {
-                name: 'twitterlogo.png',
+                name: 'logo.png',
                 mimetype: 'image/png'
             },
             media: {
@@ -41,7 +43,7 @@ async function uploadfile() {
     } catch (err) {
         console.log(err.message);
     }
-}
+});
 // uploadfile();
 
 async function deletefile() {
@@ -76,4 +78,5 @@ async function publicurl() {
     }
 }
 
-publicurl();
+// publicurl();
+app.listen(5501);

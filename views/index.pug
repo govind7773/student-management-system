@@ -3,14 +3,14 @@
 
 <head>
     include ./links
-    <title>user management</title>
+    <title>student management</title>
 </head>
 
 <body>
     include ./header
     <main id="main_body">
         <div class="user-create">
-            <a href="/new_user"><span>new user <i class="far fa-user"></i></span></a>
+            <a href="/new_user"><span>new student <i class="far fa-user"></i></span></a>
         </div>
         <form action="/" method="post">
             <table class="table">
@@ -25,11 +25,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                include ./table
+                    include ./table
                 </tbody>
             </table>
         </form>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    script(src="../public/js/index.js") 
 </body>
 
 </html>
